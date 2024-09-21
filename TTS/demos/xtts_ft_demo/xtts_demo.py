@@ -25,7 +25,7 @@ from pydantic import BaseModel, ConfigDict
 
 XTTS_MODEL = None
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_DIR = os.path.join(SCRIPT_DIR, "model")
+MODEL_DIR = '/model/model.pth'
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "output")
 FILTER_SUFFIX = "_DeepFilterNet3.wav"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
