@@ -75,23 +75,23 @@ _abbreviations = {
       "vi": [
         (re.compile(r"\b%s\." % x[0], re.IGNORECASE), x[1])
         for x in [
-            ("bs", "bác sĩ"),          # Doctor
-            ("th.s", "thạc sĩ"),       # Master (degree)
-            ("ts", "tiến sĩ"),         # Doctorate (PhD)
-            ("gđ", "giám đốc"),        # Director
-            ("pgđ", "phó giám đốc"),   # Deputy Director
-            ("kts", "kiến trúc sư"),   # Architect
-            ("cđ", "cao đẳng"),        # College
-            ("tnhh", "trách nhiệm hữu hạn"), # Limited Liability
-            ("nxb", "nhà xuất bản"),   # Publisher
-            ("ch", "cử nhân"),         # Bachelor
-            ("gs", "giáo sư"),         # Professor
-            ("cn", "công nhân"),       # Worker
-            ("ks", "kỹ sư"),           # Engineer
-            ("uv", "ủy viên"),         # Member
-            ("tp", "thành phố"),       # City
-            ("pgs", "phó giáo sư"),    # Associate Professor
-            ("tskh", "tiến sĩ khoa học"), # Doctor of Science
+            ("bs", "bác sĩ"),          
+            ("th.s", "thạc sĩ"),       
+            ("ts", "tiến sĩ"),         
+            ("gđ", "giám đốc"),        
+            ("pgđ", "phó giám đốc"),   
+            ("kts", "kiến trúc sư"),   
+            ("cđ", "cao đẳng"),        
+            ("tnhh", "trách nhiệm hữu hạn"), 
+            ("nxb", "nhà xuất bản"),   
+            ("ch", "cử nhân"),         
+            ("gs", "giáo sư"),         
+            ("cn", "công nhân"),       
+            ("ks", "kỹ sư"),           
+            ("uv", "ủy viên"),         
+            ("tp", "thành phố"),       
+            ("pgs", "phó giáo sư"),    
+            ("tskh", "tiến sĩ khoa học"), 
         ]
     ],
 
