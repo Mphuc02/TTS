@@ -38,6 +38,10 @@ def clear_gpu_cache():
 
 def load_model(checkpoint_dir="model/", repo_id="capleaf/viXTTS", use_deepspeed=False):
     global XTTS_MODEL
+    if XTTS_MODEL is not None:
+        yield "Model Loaded!"
+        return
+
     clear_gpu_cache()
     os.makedirs(checkpoint_dir, exist_ok=True)
 
@@ -315,10 +319,7 @@ if __name__ == "__main__":
         REFERENCE_AUDIO = os.abspath(args.reference_audio)
 
     with gr.Blocks() as demo:
-        intro = """
-        # viXTTS Inference Demo
-        Visit viXTTS on HuggingFace: [viXTTS](https://huggingface.co/capleaf/viXTTS)
-        """
+        intro = ""
         gr.Markdown(intro)
         with gr.Row():
             with gr.Column() as col1:
@@ -335,7 +336,10 @@ if __name__ == "__main__":
                     value=True, label="Use DeepSpeed for faster inference"
                 )
 
-                progress_load = gr.Label(label="Progress:")
+                if(XTTS_MODEL is not None):
+                    progress_load = gr.Label(label="Model Loaded")
+                else:
+                    progress_load = gr.Label(label="Progress:")
                 load_btn = gr.Button(
                     value="Step 1 - Load viXTTS model", variant="primary"
                 )
